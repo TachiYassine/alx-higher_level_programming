@@ -1,8 +1,8 @@
 def new_in_list(my_list, idx, element):
     copy = my_list.copy()
     if idx < 0:
-        return my_list
+        return copy
     if idx >= len(copy):
-        return my_list
+        return copy
     copy[idx] = element
     return copy
