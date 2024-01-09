@@ -4,5 +4,5 @@ def print_matrix_integer(matrix=[[]]):
         return None
     for raw in matrix:
         for element in raw:
-            print(element, end=" ")  # Using end=" " to print elements in the same line
+            print("{:d}".format(element), end=" ")  # Using end=" " to print elements in the same line
         print("")  # Printing a new line after each sublist
