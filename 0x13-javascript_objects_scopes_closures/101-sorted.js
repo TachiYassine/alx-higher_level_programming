@@ -1,9 +1,14 @@
 #!/usr/bin/node
-// function that returns the number of occurrences in a list
+// Import the dictionary from data.js
+const dict = require('./data.js').dict;
 
-const originalList = require('./100-data').list;
-console.log(originalList);
-const mappedList = originalList.map (function (e, index) {
-  return (e * index);
-});
-console.log(mappedList);
+const result = {};
+
+for (const [userId, occurrence] of Object.entries(dict)) {
+  if (!result[occurrence]) {
+    result[occurrence] = [];
+  }
+  result[occurrence].push(userId);
+}
+
+console.log(result);
